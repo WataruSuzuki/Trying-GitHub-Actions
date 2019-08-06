@@ -1,0 +1,17 @@
+name: Trying issue comment
+
+on: [issue_comment]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Check environment value
+      run: |
+        echo $GITHUB_EVENT_NAME
+        echo `cat $GITHUB_EVENT_PATH`
+        echo $GITHUB_SHA
