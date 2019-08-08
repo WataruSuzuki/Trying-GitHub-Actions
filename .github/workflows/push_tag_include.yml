@@ -1,0 +1,18 @@
+name: Trying push tag include
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Check environment value
+      run: |
+        echo $GITHUB_EVENT_NAME
+        echo `cat $GITHUB_EVENT_PATH`
+        echo $GITHUB_SHA
+      if: contains(github.ref, 'tags/v')
