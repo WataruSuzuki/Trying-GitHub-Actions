@@ -1,6 +1,6 @@
-name: Trying pull request review comment
+name: Trying issue comment
 
-on: [pull_request_review_comment]
+on: [issue_comment]
 
 jobs:
   build:

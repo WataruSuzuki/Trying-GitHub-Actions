@@ -1,6 +1,6 @@
-name: Trying pull request review comment
+name: Trying push tag include
 
-on: [pull_request_review_comment]
+on: [push]
 
 jobs:
   build:
@@ -15,3 +15,4 @@ jobs:
         echo $GITHUB_EVENT_NAME
         echo `cat $GITHUB_EVENT_PATH`
         echo $GITHUB_SHA
+      if: contains(github.ref, 'tags/v')

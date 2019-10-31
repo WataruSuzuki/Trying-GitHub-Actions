@@ -13,5 +13,5 @@ jobs:
     - name: Check environment value
       run: |
         echo $GITHUB_EVENT_NAME
-        echo $GITHUB_EVENT_PATH
+        echo `cat $GITHUB_EVENT_PATH`
         echo $GITHUB_SHA

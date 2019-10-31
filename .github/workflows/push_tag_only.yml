@@ -1,6 +1,11 @@
-name: Trying pull request review comment
+name: Trying push tag only
 
-on: [pull_request_review_comment]
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "!*"
 
 jobs:
   build:
